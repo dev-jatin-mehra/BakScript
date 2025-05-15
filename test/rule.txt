@@ -1,3 +1,0 @@
-For Variable declaration :
-make <datatype> <varname> = <value>
-

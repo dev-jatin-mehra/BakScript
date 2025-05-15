@@ -1,19 +1,35 @@
 #ifndef TOKENS_H
 #define TOKENS_H
 
-typedef enum{
-    TOKEN_WHEN,TOKEN_OTHERWISE,TOKEN_REPEAT,TOKEN_ASLONG, // Keywords
-    TOKEN_MAKE,TOKEN_SHOW,TOKEN_TEXT,TOKEN_NUM,TOKEN_DECIMAL,// Datatypes
-    TOKEN_IDENTIFIER,TOKEN_STRING,TOKEN_NUMBER,//variables&Values
-    TOKEN_EQUAL,TOKEN_PLUS,TOKEN_MINUS,TOKEN_STAR,TOKEN_SLASH,//operators
-    TOKEN_GREATER,TOKEN_LESS,TOKEN_COLON,TOKEN_SEMICOLON,//symbol
-    TOKEN_EOF//eof
-}TK_TYPE;
+typedef enum
+{
+    TOKEN_REPEAT,         // repeat keyword
+    TOKEN_NUM,            // num keyword
+    TOKEN_STRING,         // string keyword
+    TOKEN_WHEN,           // when keyword
+    TOKEN_OTHERWISE,      // otherwise keyword
+    TOKEN_SHOW,           // show keyword
+    TOKEN_IDENTIFIER,     // variable names
+    TOKEN_NUMBER,         // numbers like 5, 10 etc
+    TOKEN_STRING_LITERAL, // string literals "John"
+    TOKEN_EQUAL,          // =
+    TOKEN_GT,               // '>'
+    TOKEN_LT,               // '<'
+    TOKEN_SEMICOLON,      // ;
+    TOKEN_COLON,          // :
+    TOKEN_PLUS,           // +
+    TOKEN_MINUS,          // -
+    TOKEN_STAR,           // *
+    TOKEN_SLASH,          // /
+    TOKEN_LBRACE,         // {
+    TOKEN_RBRACE,         // }
+    TOKEN_EOF             // end of file/input
+} TK_TYPE;
 
 typedef struct
 {
     TK_TYPE type;
-    char* lexeme;
-}Token;
+    char *lexeme;
+} Token;
 
 #endif

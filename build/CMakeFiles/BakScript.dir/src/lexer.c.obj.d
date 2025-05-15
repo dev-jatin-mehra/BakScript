@@ -8,6 +8,6 @@ CMakeFiles/BakScript.dir/src/lexer.c.obj: \
  c:\mingw\include\stdlib.h c:\mingw\include\string.h \
  c:\mingw\include\strings.h c:\mingw\include\wchar.h \
  c:\mingw\include\ctype.h c:\mingw\include\wctype.h \
- d:\projectlist\bakscript\include\token.h \
- d:\projectlist\bakscript\include\lexer.h \
- d:\projectlist\bakscript\include\token.h
+ D:/ProjectList/BakScript/include/token.h \
+ D:/ProjectList/BakScript/include/lexer.h \
+ D:/ProjectList/BakScript/include/token.h

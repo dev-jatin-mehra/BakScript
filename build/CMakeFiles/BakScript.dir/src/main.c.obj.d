@@ -5,13 +5,5 @@ CMakeFiles/BakScript.dir/src/main.c.obj: \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\stddef.h \
  c:\mingw\include\sys/types.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\stdarg.h \
- c:\mingw\include\stdlib.h c:\mingw\include\string.h \
- c:\mingw\include\strings.h c:\mingw\include\wchar.h \
- d:\projectlist\bakscript\include\lexer.h \
- d:\projectlist\bakscript\include\token.h \
- d:\projectlist\bakscript\include\parser.h \
- d:\projectlist\bakscript\include\lexer.h \
- d:\projectlist\bakscript\include\ast.h \
- d:\projectlist\bakscript\include\ast.h \
- d:\projectlist\bakscript\include\error.h \
- d:\projectlist\bakscript\include\lexer.h
+ c:\mingw\include\stdlib.h d:\projectlist\bakscript\include\lexer.h \
+ d:\projectlist\bakscript\include\token.h

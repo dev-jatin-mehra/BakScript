@@ -1,6 +1,8 @@
 #ifndef LEXER_H
-#include "./token.h"
 #define LEXER_H
+
+#include "token.h"
+
 #define MAX_TOKEN_LENGTH 25
 #define strdup _strdup
 

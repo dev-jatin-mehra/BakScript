@@ -1,11 +1,11 @@
-#include "stdio.h"
-#include "stdlib.h"
-#include "string.h"
-#include "ctype.h"
-#include "../include/token.h"
-#include "../include/lexer.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+#include "token.h"
+#include "lexer.h"
 
-Lexer init_lexer(char *source) /*Lexer Init*/
+Lexer init_lexer(char *source)
 {
     Lexer lexer;
     lexer.source = source;
@@ -36,33 +36,25 @@ Token scanIdentifier(Lexer *lexer)
     char buffer[MAX_TOKEN_LENGTH];
     int length = 0;
 
-    while (isalpha(peek(lexer)) && length < MAX_TOKEN_LENGTH - 1)
+    while ((isalnum(peek(lexer)) || peek(lexer) == '_') && length < MAX_TOKEN_LENGTH - 1)
     {
         buffer[length++] = advance(lexer);
     }
     buffer[length] = '\0';
 
-    // Check for Keyword
+    if (strcmp(buffer, "repeat") == 0)
+        return (Token){TOKEN_REPEAT, strdup(buffer)};
+    if (strcmp(buffer, "num") == 0)
+        return (Token){TOKEN_NUM, strdup(buffer)};
+    if (strcmp(buffer, "string") == 0)
+        return (Token){TOKEN_STRING, strdup(buffer)};
     if (strcmp(buffer, "when") == 0)
         return (Token){TOKEN_WHEN, strdup(buffer)};
     if (strcmp(buffer, "otherwise") == 0)
         return (Token){TOKEN_OTHERWISE, strdup(buffer)};
-    if (strcmp(buffer, "repeat") == 0)
-        return (Token){TOKEN_REPEAT, strdup(buffer)};
-    if (strcmp(buffer, "aslong") == 0)
-        return (Token){TOKEN_ASLONG, strdup(buffer)};
-    if (strcmp(buffer, "make") == 0)
-        return (Token){TOKEN_MAKE, strdup(buffer)};
     if (strcmp(buffer, "show") == 0)
         return (Token){TOKEN_SHOW, strdup(buffer)};
-    if (strcmp(buffer, "num") == 0) // defining Number
-        return (Token){TOKEN_NUM, strdup(buffer)};
-    if (strcmp(buffer, "decimal") == 0) // defining float
-        return (Token){TOKEN_DECIMAL, strdup(buffer)};
-    if (strcmp(buffer, "text") == 0) // defining string
-        return (Token){TOKEN_TEXT, strdup(buffer)};
 
-    // Identifier
     return (Token){TOKEN_IDENTIFIER, strdup(buffer)};
 }
 
@@ -76,23 +68,15 @@ Token scanNumber(Lexer *lexer)
         buffer[length++] = advance(lexer);
     }
 
-    if (peek(lexer) == '.')
-    {
-        buffer[length++] = advance(lexer);
-        while (isdigit(peek(lexer)) && length < MAX_TOKEN_LENGTH - 1)
-        {
-            buffer[length++] = advance(lexer);
-        }
-        buffer[length] = '\0';
-        return (Token){TOKEN_DECIMAL, strdup(buffer)};
-    }
+    // Optional: handle decimals later if needed
+
     buffer[length] = '\0';
     return (Token){TOKEN_NUMBER, strdup(buffer)};
 }
 
 Token scanString(Lexer *lexer)
 {
-    advance(lexer);
+    advance(lexer); // skip opening quote
     char buffer[MAX_TOKEN_LENGTH];
     int length = 0;
 
@@ -101,18 +85,26 @@ Token scanString(Lexer *lexer)
         buffer[length++] = advance(lexer);
     }
 
-    advance(lexer);
-    buffer[length] = '\0';
-    return (Token){TOKEN_STRING, strdup(buffer)};
+    if (peek(lexer) == '"')
+    {
+        advance(lexer); // skip closing quote
+        buffer[length] = '\0';
+        return (Token){TOKEN_STRING_LITERAL, strdup(buffer)};
+    }
+    else
+    {
+        printf("Error: Unterminated string literal\n");
+        exit(1);
+    }
 }
 
-// Next Token
 Token getNextToken(Lexer *lexer)
 {
     skipWhiteSpace(lexer);
 
     char c = peek(lexer);
-    if (isalpha(c))
+
+    if (isalpha(c) || c == '_')
         return scanIdentifier(lexer);
     if (isdigit(c))
         return scanNumber(lexer);
@@ -124,6 +116,18 @@ Token getNextToken(Lexer *lexer)
     case '=':
         advance(lexer);
         return (Token){TOKEN_EQUAL, "="};
+    case '>':
+        advance(lexer);
+        return (Token){TOKEN_GT, ">"};
+    case '<':
+        advance(lexer);
+        return (Token){TOKEN_LT, "<"};
+    case ';':
+        advance(lexer);
+        return (Token){TOKEN_SEMICOLON, ";"};
+    case ':':
+        advance(lexer);
+        return (Token){TOKEN_COLON, ":"};
     case '+':
         advance(lexer);
         return (Token){TOKEN_PLUS, "+"};
@@ -136,22 +140,16 @@ Token getNextToken(Lexer *lexer)
     case '/':
         advance(lexer);
         return (Token){TOKEN_SLASH, "/"};
-    case '>':
+    case '{':
         advance(lexer);
-        return (Token){TOKEN_GREATER, ">"};
-    case '<':
+        return (Token){TOKEN_LBRACE, "{"};
+    case '}':
         advance(lexer);
-        return (Token){TOKEN_LESS, "<"};
-    case ':':
-        advance(lexer);
-        return (Token){TOKEN_COLON, ":"};
-    case ';':
-        advance(lexer);
-        return (Token){TOKEN_SEMICOLON, ";"};
+        return (Token){TOKEN_RBRACE, "}"};
     case '\0':
         return (Token){TOKEN_EOF, "EOF"};
     default:
-        printf("Unexpected Chracter:%c\n", c);
+        printf("Unexpected Character: %c\n", c);
         exit(1);
     }
 }
@@ -160,7 +158,6 @@ void printTokens(char *source)
 {
     Lexer lexer = init_lexer(source);
     Token token;
-
     do
     {
         token = getNextToken(&lexer);

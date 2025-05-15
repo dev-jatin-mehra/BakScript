@@ -1,4 +1,5 @@
-when x > 5 :
-    show "Big number"
-otherwise : 
-    show "Small number"
+when x > 5 : {
+    show x;
+} otherwise : {
+    show name;
+}

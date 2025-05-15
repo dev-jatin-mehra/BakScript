@@ -101,72 +101,21 @@ CMakeFiles/BakScript.dir/src/lexer.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/BakScript.dir/src/lexer.c.s"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\ProjectList\BakScript\src\lexer.c -o CMakeFiles\BakScript.dir\src\lexer.c.s
 
-CMakeFiles/BakScript.dir/src/error/error.c.obj: CMakeFiles/BakScript.dir/flags.make
-CMakeFiles/BakScript.dir/src/error/error.c.obj: CMakeFiles/BakScript.dir/includes_C.rsp
-CMakeFiles/BakScript.dir/src/error/error.c.obj: D:/ProjectList/BakScript/src/error/error.c
-CMakeFiles/BakScript.dir/src/error/error.c.obj: CMakeFiles/BakScript.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\ProjectList\BakScript\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/BakScript.dir/src/error/error.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BakScript.dir/src/error/error.c.obj -MF CMakeFiles\BakScript.dir\src\error\error.c.obj.d -o CMakeFiles\BakScript.dir\src\error\error.c.obj -c D:\ProjectList\BakScript\src\error\error.c
-
-CMakeFiles/BakScript.dir/src/error/error.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/BakScript.dir/src/error/error.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\ProjectList\BakScript\src\error\error.c > CMakeFiles\BakScript.dir\src\error\error.c.i
-
-CMakeFiles/BakScript.dir/src/error/error.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/BakScript.dir/src/error/error.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\ProjectList\BakScript\src\error\error.c -o CMakeFiles\BakScript.dir\src\error\error.c.s
-
-CMakeFiles/BakScript.dir/src/parser.c.obj: CMakeFiles/BakScript.dir/flags.make
-CMakeFiles/BakScript.dir/src/parser.c.obj: CMakeFiles/BakScript.dir/includes_C.rsp
-CMakeFiles/BakScript.dir/src/parser.c.obj: D:/ProjectList/BakScript/src/parser.c
-CMakeFiles/BakScript.dir/src/parser.c.obj: CMakeFiles/BakScript.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\ProjectList\BakScript\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/BakScript.dir/src/parser.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BakScript.dir/src/parser.c.obj -MF CMakeFiles\BakScript.dir\src\parser.c.obj.d -o CMakeFiles\BakScript.dir\src\parser.c.obj -c D:\ProjectList\BakScript\src\parser.c
-
-CMakeFiles/BakScript.dir/src/parser.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/BakScript.dir/src/parser.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\ProjectList\BakScript\src\parser.c > CMakeFiles\BakScript.dir\src\parser.c.i
-
-CMakeFiles/BakScript.dir/src/parser.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/BakScript.dir/src/parser.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\ProjectList\BakScript\src\parser.c -o CMakeFiles\BakScript.dir\src\parser.c.s
-
-CMakeFiles/BakScript.dir/src/ast.c.obj: CMakeFiles/BakScript.dir/flags.make
-CMakeFiles/BakScript.dir/src/ast.c.obj: CMakeFiles/BakScript.dir/includes_C.rsp
-CMakeFiles/BakScript.dir/src/ast.c.obj: D:/ProjectList/BakScript/src/ast.c
-CMakeFiles/BakScript.dir/src/ast.c.obj: CMakeFiles/BakScript.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\ProjectList\BakScript\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/BakScript.dir/src/ast.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BakScript.dir/src/ast.c.obj -MF CMakeFiles\BakScript.dir\src\ast.c.obj.d -o CMakeFiles\BakScript.dir\src\ast.c.obj -c D:\ProjectList\BakScript\src\ast.c
-
-CMakeFiles/BakScript.dir/src/ast.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/BakScript.dir/src/ast.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\ProjectList\BakScript\src\ast.c > CMakeFiles\BakScript.dir\src\ast.c.i
-
-CMakeFiles/BakScript.dir/src/ast.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/BakScript.dir/src/ast.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\ProjectList\BakScript\src\ast.c -o CMakeFiles\BakScript.dir\src\ast.c.s
-
 # Object files for target BakScript
 BakScript_OBJECTS = \
 "CMakeFiles/BakScript.dir/src/main.c.obj" \
-"CMakeFiles/BakScript.dir/src/lexer.c.obj" \
-"CMakeFiles/BakScript.dir/src/error/error.c.obj" \
-"CMakeFiles/BakScript.dir/src/parser.c.obj" \
-"CMakeFiles/BakScript.dir/src/ast.c.obj"
+"CMakeFiles/BakScript.dir/src/lexer.c.obj"
 
 # External object files for target BakScript
 BakScript_EXTERNAL_OBJECTS =
 
 BakScript.exe: CMakeFiles/BakScript.dir/src/main.c.obj
 BakScript.exe: CMakeFiles/BakScript.dir/src/lexer.c.obj
-BakScript.exe: CMakeFiles/BakScript.dir/src/error/error.c.obj
-BakScript.exe: CMakeFiles/BakScript.dir/src/parser.c.obj
-BakScript.exe: CMakeFiles/BakScript.dir/src/ast.c.obj
 BakScript.exe: CMakeFiles/BakScript.dir/build.make
 BakScript.exe: CMakeFiles/BakScript.dir/linkLibs.rsp
 BakScript.exe: CMakeFiles/BakScript.dir/objects1.rsp
 BakScript.exe: CMakeFiles/BakScript.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\ProjectList\BakScript\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable BakScript.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\ProjectList\BakScript\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable BakScript.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\BakScript.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

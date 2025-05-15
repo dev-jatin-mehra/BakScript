@@ -1,0 +1,1 @@
+cd build && .\BakScript.exe ..\test\var.bak

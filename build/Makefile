@@ -128,54 +128,6 @@ BakScript/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BakScript.dir\build.make CMakeFiles/BakScript.dir/build
 .PHONY : BakScript/fast
 
-src/ast.obj: src/ast.c.obj
-.PHONY : src/ast.obj
-
-# target to build an object file
-src/ast.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BakScript.dir\build.make CMakeFiles/BakScript.dir/src/ast.c.obj
-.PHONY : src/ast.c.obj
-
-src/ast.i: src/ast.c.i
-.PHONY : src/ast.i
-
-# target to preprocess a source file
-src/ast.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BakScript.dir\build.make CMakeFiles/BakScript.dir/src/ast.c.i
-.PHONY : src/ast.c.i
-
-src/ast.s: src/ast.c.s
-.PHONY : src/ast.s
-
-# target to generate assembly for a file
-src/ast.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BakScript.dir\build.make CMakeFiles/BakScript.dir/src/ast.c.s
-.PHONY : src/ast.c.s
-
-src/error/error.obj: src/error/error.c.obj
-.PHONY : src/error/error.obj
-
-# target to build an object file
-src/error/error.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BakScript.dir\build.make CMakeFiles/BakScript.dir/src/error/error.c.obj
-.PHONY : src/error/error.c.obj
-
-src/error/error.i: src/error/error.c.i
-.PHONY : src/error/error.i
-
-# target to preprocess a source file
-src/error/error.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BakScript.dir\build.make CMakeFiles/BakScript.dir/src/error/error.c.i
-.PHONY : src/error/error.c.i
-
-src/error/error.s: src/error/error.c.s
-.PHONY : src/error/error.s
-
-# target to generate assembly for a file
-src/error/error.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BakScript.dir\build.make CMakeFiles/BakScript.dir/src/error/error.c.s
-.PHONY : src/error/error.c.s
-
 src/lexer.obj: src/lexer.c.obj
 .PHONY : src/lexer.obj
 
@@ -224,30 +176,6 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BakScript.dir\build.make CMakeFiles/BakScript.dir/src/main.c.s
 .PHONY : src/main.c.s
 
-src/parser.obj: src/parser.c.obj
-.PHONY : src/parser.obj
-
-# target to build an object file
-src/parser.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BakScript.dir\build.make CMakeFiles/BakScript.dir/src/parser.c.obj
-.PHONY : src/parser.c.obj
-
-src/parser.i: src/parser.c.i
-.PHONY : src/parser.i
-
-# target to preprocess a source file
-src/parser.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BakScript.dir\build.make CMakeFiles/BakScript.dir/src/parser.c.i
-.PHONY : src/parser.c.i
-
-src/parser.s: src/parser.c.s
-.PHONY : src/parser.s
-
-# target to generate assembly for a file
-src/parser.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BakScript.dir\build.make CMakeFiles/BakScript.dir/src/parser.c.s
-.PHONY : src/parser.c.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -257,21 +185,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... BakScript
-	@echo ... src/ast.obj
-	@echo ... src/ast.i
-	@echo ... src/ast.s
-	@echo ... src/error/error.obj
-	@echo ... src/error/error.i
-	@echo ... src/error/error.s
 	@echo ... src/lexer.obj
 	@echo ... src/lexer.i
 	@echo ... src/lexer.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
-	@echo ... src/parser.obj
-	@echo ... src/parser.i
-	@echo ... src/parser.s
 .PHONY : help
 
 
